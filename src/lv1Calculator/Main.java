@@ -34,8 +34,13 @@ public class Main {
                         System.out.println(leftValue * rightValue);
                         break;
                     case '/' :
-                        System.out.println(leftValue / rightValue);
-                        break;
+                        try{
+                            System.out.println(leftValue / rightValue);
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("분모에 0이 들어올 수 없습니다.");
+                            continue;
+                        }
                     default:
                         System.out.println("잘못된 연산 입력입니다. (+,-,*,/)");
 //                        temp = scanner.nextLine(); 연산기호 받는 부분은 후순위고 nextLine 이므로 버퍼가 비워졌으니 필요없음
